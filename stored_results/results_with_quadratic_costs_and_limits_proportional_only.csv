@@ -1,0 +1,97 @@
+# Description of the experiment:
+#
+# - We generate the costs to up to 10.000 tasks for 10 and 100 resources.
+# All costs follow quadratic functions with RNG seeds [700..799].
+# - We schedule from 1.000 to 10.000 tasks in increments of 100.
+# - We run OLAR, and the extended versions of Fed-LBAP, FedAvg, and
+# Proportional.
+# -- For Proportional, we generate three different results using
+# three different values for k (1, #tasks/#resources, #tasks)
+# - All resources have a lower limit of 4, except the resource with the
+# highest cost for the number of tasks. That resource gets a minimum of
+# (tasks/resources)/4.
+# - All resources have an upper limit of 2*(tasks/resources), except the
+# resource with the lowest cost for the number of tasks. That resource
+# gets an upper limit of (tasks/resources)/2.
+# - Every result is verified and logged to a CSV file.
+Scheduler,Tasks,Resources,Makespan
+Ext-Proportional-(tasks/res),1000,10,90855.77135347179
+Ext-Proportional-(tasks),1000,10,90855.77135347179
+Proportional-(tasks/res),1000,10,77136.68470190921
+Proportional-(tasks),1000,10,78548.89390542572
+Ext-Proportional-(tasks/res),2000,10,359761.12912302697
+Ext-Proportional-(tasks),2000,10,361618.10533954884
+Proportional-(tasks/res),2000,10,309276.2244873992
+Proportional-(tasks),2000,10,312097.54428538674
+Ext-Proportional-(tasks/res),3000,10,809505.5671474478
+Ext-Proportional-(tasks),3000,10,812289.9117786761
+Proportional-(tasks/res),3000,10,696417.9296647062
+Proportional-(tasks),3000,10,700648.3600571649
+Ext-Proportional-(tasks/res),4000,10,1439159.477624919
+Ext-Proportional-(tasks),4000,10,1442871.1906708537
+Proportional-(tasks/res),4000,10,1235746.833526483
+Proportional-(tasks),4000,10,1244201.34122076
+Ext-Proportional-(tasks/res),5000,10,2248722.8605554407
+Ext-Proportional-(tasks),5000,10,2248722.8605554407
+Proportional-(tasks/res),5000,10,1932188.3141901884
+Proportional-(tasks),5000,10,1942756.4877761723
+Ext-Proportional-(tasks/res),6000,10,3232634.046313225
+Ext-Proportional-(tasks),6000,10,3243762.165814359
+Proportional-(tasks/res),6000,10,2783631.9602457117
+Proportional-(tasks),6000,10,2796313.7997234017
+Ext-Proportional-(tasks/res),7000,10,4401089.005735141
+Ext-Proportional-(tasks),7000,10,4407578.043775634
+Proportional-(tasks/res),7000,10,3790077.7716930513
+Proportional-(tasks),7000,10,3804873.2770624477
+Ext-Proportional-(tasks/res),8000,10,5749453.437610106
+Ext-Proportional-(tasks),8000,10,5756869.844065306
+Proportional-(tasks/res),8000,10,4951525.748532208
+Proportional-(tasks),8000,10,4962795.326848865
+Ext-Proportional-(tasks/res),9000,10,7277727.341938121
+Ext-Proportional-(tasks),9000,10,7286071.116808028
+Proportional-(tasks/res),9000,10,6267975.890763181
+Proportional-(tasks),9000,10,6280654.57967431
+Ext-Proportional-(tasks/res),10000,10,8985910.718719188
+Ext-Proportional-(tasks),10000,10,8985910.718719188
+Proportional-(tasks/res),10000,10,7739428.1983859725
+Proportional-(tasks),10000,10,7753515.997891571
+Ext-Proportional-(tasks/res),1000,100,956.7929993860398
+Ext-Proportional-(tasks),1000,100,1091.4471237333187
+Proportional-(tasks/res),1000,100,1175.0410417102228
+Proportional-(tasks),1000,100,1893.3862699034323
+Ext-Proportional-(tasks/res),2000,100,3670.03862826385
+Ext-Proportional-(tasks),2000,100,3835.670072808157
+Proportional-(tasks/res),2000,100,4434.521114733468
+Proportional-(tasks),2000,100,6948.5935906546565
+Ext-Proportional-(tasks/res),3000,100,8105.800111552238
+Ext-Proportional-(tasks),3000,100,8524.206653046049
+Proportional-(tasks/res),3000,100,10984.091813165114
+Proportional-(tasks),3000,100,15174.877103061677
+Ext-Proportional-(tasks/res),4000,100,14277.70992366142
+Ext-Proportional-(tasks),4000,100,14688.203206423206
+Proportional-(tasks/res),4000,100,20917.877890309872
+Proportional-(tasks),4000,100,26572.236807124496
+Ext-Proportional-(tasks/res),5000,100,22185.768064591386
+Ext-Proportional-(tasks),5000,100,22976.501475400382
+Proportional-(tasks/res),5000,100,34022.74015911043
+Proportional-(tasks),5000,100,41140.67270284311
+Ext-Proportional-(tasks/res),6000,100,31829.97453434215
+Ext-Proportional-(tasks),6000,100,32560.27163307986
+Proportional-(tasks/res),6000,100,49841.73447255872
+Proportional-(tasks),6000,100,59376.74132883733
+Ext-Proportional-(tasks/res),7000,100,43213.244793334845
+Ext-Proportional-(tasks),7000,100,43810.085341573285
+Proportional-(tasks/res),7000,100,69207.43947873099
+Proportional-(tasks),7000,100,80368.63925380743
+Ext-Proportional-(tasks/res),8000,100,56347.58930391081
+Ext-Proportional-(tasks),8000,100,57451.875352778115
+Proportional-(tasks/res),8000,100,92363.78411544689
+Proportional-(tasks),8000,100,104531.61337043335
+Ext-Proportional-(tasks/res),9000,100,71222.39168446332
+Ext-Proportional-(tasks),9000,100,72121.46266557387
+Proportional-(tasks/res),9000,100,118152.95115087063
+Proportional-(tasks),9000,100,131865.66367871503
+Ext-Proportional-(tasks/res),10000,100,87837.65193499233
+Ext-Proportional-(tasks),10000,100,89363.01436551797
+Proportional-(tasks/res),10000,100,147113.1943779502
+Proportional-(tasks),10000,100,163194.67016374832
