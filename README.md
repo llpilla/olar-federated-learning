@@ -1,6 +1,7 @@
 # OLAR: OptimaL Assignment of tasks to Resources
 
 OLAR is an algorithm for optimal task assignment in the context of heterogeneous Federated Learning devices.
+It is described in a preprint available in [HAL](https://hal.archives-ouvertes.fr/hal-02954040v1) and [arXiv](https://arxiv.org/abs/2010.00239).
 
 The Python 3 and Bash scripts can be used to test scheduling algorithms in different scenarios with variations in the number of tasks, resources, kinds of resources (cost functions), lower and upper limits of tasks per resources, etc.
 
@@ -10,7 +11,7 @@ If you want to reproduce the analysis in said manuscript, check [stored\_results
 ## Dependencies
 
 We use numpy, matplotlib, pandas, seaborn, and scipy.
-Please run `./setup` to install them, if needed.
+Please run `./setup.sh` to install them, if needed.
 
 ## How to use
 
